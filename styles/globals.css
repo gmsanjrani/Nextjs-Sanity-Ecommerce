@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+
+  outline: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Poppins, sans-serif;
+
+}
+
+.main-container{
+  max-width: 1400px; 
+  margin: 0 auto ;
+  width: 95%;
+
+}
+::-webkit-scrollbar {
+   display: none;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.marquee {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 8s linear infinite;
+  width: 180%;
+}
+.track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.maylike-products-wrapper{
+  margin-top: 90px;
+}
+.maylike-products-wrapper h2{
+  text-align: center;
+  color: #324d67;
+  font-weight: 700;
+  font-size: 28px;
+}
+.maylike-products-container{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.small-image{
+  border-radius: 8px;
+  background-color: #ebebeb;
+  /* width: 70px; */
+  /* height: 70px; */
+  /* cursor: pointer; */
+}
+
+.selected-image{
+  background-color:#f02d34;
+}
+
+
+/* #__next{
+  background-color: red;
+} */
+@media screen and (max-width: 400px) {
+  .total h3{
+    font-size: 20px;
+  }
+  .track {
+    animation: marquee 10s linear infinite;
+    width: 550%;
+  }
+  #__next{
+    /* margin-left: 1.4rem; */
+    align-self: center;
+    justify-self: center;
+    border: 1px solid #f02d34;
+  }
+  
+}
